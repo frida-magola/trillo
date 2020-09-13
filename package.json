@@ -1,0 +1,24 @@
+{
+  "name": "trillo",
+  "version": "1.0.0",
+  "description": "Trillo Booking app",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass scss/main.scss public/css/trillo.css --watch",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "build:compile-sass": "sass scss/main.scss public/css/trillo.comp.css",
+    "build:prefix-css": "postcss --use autoprefixer -b 'last 10 versions' public/css/trillo.concat.css -o public/css/trillo.prefix.css ",
+    "build:compress-css": "node-sass public/css/trillo.prefix.css public/css/trillo.min.css --output-style compressed",
+    "build": "npm-run-all build:*"
+  },
+  "author": "Nyira Mwalila D.",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "concat": "^1.0.3",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.2"
+  }
+}

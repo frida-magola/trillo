@@ -8,14 +8,261 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/public/css/trillo.css" />
+    <link rel="stylesheet" href="/public/css/trillo.min.css" />
   </head>
   <body>
-    <div class="e-flex__container">
-      <header class="e-flex__header">Header</header>
-      <div class="e-flex__main">
-        <nav class="e-sidebar">sidebar</nav>
-        <main class="e-flex__content"></main>
+    <div class="e-container">
+      <header class="e-header">
+        <img src="/public/img/logo.png" alt="trillo logo" class="e-logo" />
+        <form action="#" class="e-search">
+          <input
+            type="text"
+            class="e-search__input"
+            placeholder="Search hotel..."
+          />
+          <button type="submit" class="e-search__btn">
+            <svg class="e-search__icon">
+              <use
+                xlink:href="public/img/sprite.svg#icon-magnifying-glass"
+              ></use>
+            </svg>
+          </button>
+        </form>
+        <nav class="e-user-nav">
+          <div class="e-user-nav__icon-box">
+            <svg class="e-user-nav__icon">
+              <use xlink:href="public/img/sprite.svg#icon-bookmark"></use>
+            </svg>
+            <span class="e-user-nav__notification">7</span>
+          </div>
+
+          <div class="e-user-nav__icon-box">
+            <svg class="e-user-nav__icon">
+              <use xlink:href="public/img/sprite.svg#icon-chat"></use>
+            </svg>
+            <span class="e-user-nav__notification">9</span>
+          </div>
+
+          <div class="e-user-nav__user">
+            <img
+              src="/public/img/user-1.jpg"
+              alt="user 1"
+              class="e-user-nav__user-photo"
+            />
+            <span class="e-user-nav__user-name">Holmis Helf</span>
+          </div>
+        </nav>
+      </header>
+      <div class="e-main">
+        <!-- sidebar -->
+        <nav class="e-sidebar">
+          <ul class="e-side__nav">
+            <li class="e-side__nav--item e-side__nav--item-active">
+              <a href="#" class="e-side__nav--link">
+                <svg class="e-side__nav--icon">
+                  <use xlink:href="public/img/sprite.svg#icon-home"></use>
+                </svg>
+                <span>Hotel</span>
+              </a>
+            </li>
+            <li class="e-side__nav--item">
+              <a href="#" class="e-side__nav--link">
+                <svg class="e-side__nav--icon">
+                  <use
+                    xlink:href="public/img/sprite.svg#icon-aircraft-take-off"
+                  ></use>
+                </svg>
+                <span>Flight</span>
+              </a>
+            </li>
+            <li class="e-side__nav--item">
+              <a href="#" class="e-side__nav--link">
+                <svg class="e-side__nav--icon">
+                  <use xlink:href="public/img/sprite.svg#icon-key"></use>
+                </svg>
+                <span>Car Rental</span>
+              </a>
+            </li>
+            <li class="e-side__nav--item">
+              <a href="#" class="e-side__nav--link">
+                <svg class="e-side__nav--icon">
+                  <use xlink:href="public/img/sprite.svg#icon-map"></use>
+                </svg>
+                <span>Tours</span>
+              </a>
+            </li>
+          </ul>
+          <div class="e-legal">&copy; 2020 by Trillo all rights reserved.</div>
+        </nav>
+
+        <!-- Main content -->
+        <main class="e-content">
+          <!-- Gallery -->
+          <div class="e-gallery">
+            <figure class="e-gallery__item">
+              <img
+                src="/public/img/hotel-1.jpg"
+                alt="hotel 1"
+                class="e-gallery__photo"
+              />
+            </figure>
+
+            <figure class="e-gallery__item">
+              <img
+                src="/public/img/hotel-2.jpg"
+                alt="hotel 1"
+                class="e-gallery__photo"
+              />
+            </figure>
+
+            <figure class="e-gallery__item">
+              <img
+                src="/public/img/hotel-3.jpg"
+                alt="hotel 1"
+                class="e-gallery__photo"
+              />
+            </figure>
+          </div>
+
+          <!-- Overview -->
+          <div class="e-overview">
+            <h1 class="e-overview__heading">Hotel Las Palmas</h1>
+            <div class="e-overview__stars">
+              <svg class="e-overview__icon-star">
+                <use xlink:href="public/img/sprite.svg#icon-star"></use>
+              </svg>
+
+              <svg class="e-overview__icon-star">
+                <use xlink:href="public/img/sprite.svg#icon-star"></use>
+              </svg>
+
+              <svg class="e-overview__icon-star">
+                <use xlink:href="public/img/sprite.svg#icon-star"></use>
+              </svg>
+
+              <svg class="e-overview__icon-star">
+                <use xlink:href="public/img/sprite.svg#icon-star"></use>
+              </svg>
+
+              <svg class="e-overview__icon-star">
+                <use xlink:href="public/img/sprite.svg#icon-star"></use>
+              </svg>
+            </div>
+            <div class="e-overview__location">
+              <svg class="e-overview__icon-location">
+                <use xlink:href="public/img/sprite.svg#icon-location-pin"></use>
+              </svg>
+              <button class="e-btn-inline">Albufeira, Portugal</button>
+            </div>
+            <div class="e-overview__rating">
+              <div class="e-overview__rating-average">9.6</div>
+              <div class="e-overview__rating-count">529 votes</div>
+            </div>
+          </div>
+
+          <div class="e-detail">
+            <div class="e-detail__left">
+              <p class="e-paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
+                nisi dignissimos debitis ratione sapiente saepe. Accusantium
+                cumque, quas, ut corporis incidunt deserunt quae architecto
+                voluptate.
+              </p>
+              <p class="e-paragraph">
+                Accusantium cumque, quas, ut corporis incidunt deserunt quae
+                architecto voluptate delectus, inventore iure aliquid aliquam.
+              </p>
+              <ul class="e-list">
+                <li class="e-list__item">Close to the beach</li>
+                <li class="e-list__item">Breakfast included</li>
+                <li class="e-list__item">Free aiport shuttle</li>
+                <li class="e-list__item">Free wifi in all rooms</li>
+                <li class="e-list__item">Air conditioning and heating</li>
+                <li class="e-list__item">Pets allowed</li>
+                <li class="e-list__item">We speak all languages</li>
+                <li class="e-list__item">Perfect for family</li>
+              </ul>
+              <div class="e-recommend">
+                <p class="e-recommend__count">
+                  Debra and 3 others friends recommend this hotel
+                </p>
+                <div class="e-recommend__friends">
+                  <img
+                    src="public/img/user-6.jpg"
+                    alt="user 6"
+                    class="e-recommend__photo"
+                  />
+                  <img
+                    src="public/img/user-5.jpg"
+                    alt="user 5"
+                    class="e-recommend__photo"
+                  />
+                  <img
+                    src="public/img/user-4.jpg"
+                    alt="user 4"
+                    class="e-recommend__photo"
+                  />
+                  <img
+                    src="public/img/user-2.jpg"
+                    alt="user 2"
+                    class="e-recommend__photo"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="e-detail__right">
+              <figure class="e-review">
+                <blockquote class="e-review__text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
+                  doloremque architecto dicta animi, totam, itaque officia ex.
+                </blockquote>
+                <figcaption class="e-review__user">
+                  <img
+                    src="public/img/user-3.jpg"
+                    alt="user"
+                    class="e-review__photo"
+                  />
+                  <div class="e-review__user-box">
+                    <p class="e-review__user-name">John SMith</p>
+                    <p class="e-review__user-date">Mon 14 Sept 2020</p>
+                  </div>
+                  <div class="e-review__rating">7.8</div>
+                </figcaption>
+              </figure>
+
+              <figure class="e-review">
+                <blockquote class="e-review__text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
+                  doloremque architecto dicta animi.
+                </blockquote>
+                <figcaption class="e-review__user">
+                  <img
+                    src="public/img/user-4.jpg"
+                    alt="user"
+                    class="e-review__photo"
+                  />
+                  <div class="e-review__user-box">
+                    <p class="e-review__user-name">Mark Welson</p>
+                    <p class="e-review__user-date">Tue 6 Sept 2020</p>
+                  </div>
+                  <div class="e-review__rating">5.8</div>
+                </figcaption>
+              </figure>
+
+              <button class="e-btn-inline">Show All <span>&rarr;</span></button>
+            </div>
+          </div>
+
+          <div class="e-cta">
+            <h2 class="e-cta__book-now">
+              Good news! We have 4 free rooms for your selected dates!
+            </h2>
+            <button class="e-btn">
+              <span class="e-btn__visible">Book Now</span>
+              <span class="e-btn__invisible">Only 4 rooms left</span>
+            </button>
+          </div>
+        </main>
       </div>
     </div>
   </body>

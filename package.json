@@ -8,7 +8,7 @@
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver watch:sass",
     "build:compile-sass": "sass scss/main.scss public/css/trillo.comp.css",
-    "build:prefix-css": "postcss --use autoprefixer -b 'last 10 versions' public/css/trillo.concat.css -o public/css/trillo.prefix.css ",
+    "build:prefix-css": "postcss --use autoprefixer -b 'last 10 versions' public/css/trillo.comp.css -o public/css/trillo.prefix.css ",
     "build:compress-css": "node-sass public/css/trillo.prefix.css public/css/trillo.min.css --output-style compressed",
     "build": "npm-run-all build:*"
   },

@@ -10,3 +10,16 @@ $grey-light-4: #cccccc;
 $grey-dark-1: #333333;
 $grey-dark-2: #777777;
 $grey-dark-3: #999999;
+
+$white: #ffffff;
+
+$shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+$line: 1px solid $grey-light-2;
+$shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.6);
+
+/*Break points  1em = 16px */
+$bp-xlg: 75em; //1200/16px = 75em
+$bp-lg: 68.75em; //1100px /16px
+$bp-md: 56.25em; //900px / 16px
+$bp-sm: 37.5em; //600px / 16px
+$bp-xsm: 31.25em; //600px / 16px
